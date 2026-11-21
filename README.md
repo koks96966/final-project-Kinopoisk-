@@ -39,11 +39,11 @@ KINOPOISK_API_KEY=ваш_ключ
 
 ### API-тесты (с отчётом Allure)
 
-pytest -m api -v --alluredir=allure-results
+pytest API-tests/ -v --alluredir=allure-results
 
 ### UI-тесты (с отчётом Allure)
 
-pytest -m ui -v --alluredir=allure-results
+pytest UI-tests/ -v --alluredir=allure-results
 
 ### Все тесты разом
 
@@ -52,8 +52,6 @@ pytest -v --alluredir=allure-results
 ### Конкретный тест
 
 pytest UI-tests/test_select_episode.py -v --alluredir=allure-results
-
-По умолчанию браузер запускается в видимом режиме (HEADLESS = False в config.py). Для headless-режима поменяйте значение на True.
 
 ## Отчёты Allure
 
